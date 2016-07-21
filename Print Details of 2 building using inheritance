@@ -1,0 +1,125 @@
+//Superclass
+package Session5;
+
+public class BuildingA {
+	
+	private String BuildName;
+	private double SqrFeet;
+	private String Location;
+	
+	
+	public void BuildingA()
+	{
+		BuildName = "Building A";
+		SqrFeet = 5000;
+		Location = "Hyderabad";
+		
+		
+		System.out.println("Details of First building;");
+		
+		System.out.println("Building Name: " + BuildName);
+		System.out.println("Building Name: " + SqrFeet);
+		System.out.println("Building Name: " + Location);
+		
+		System.out.println(" ");
+		
+		
+	}
+
+
+	
+}
+
+//Subclass
+
+import java.util.Scanner;
+
+public class BuildingB extends BuildingA{
+	
+	
+
+
+	private String BuildName;
+	private double SqrFeet;
+	private String Location;
+	
+	public BuildingB(String name, double sqrfeet, String loca) {
+				
+		BuildName = name;
+		SqrFeet = sqrfeet;
+		Location = loca;
+	}
+	
+	
+
+	public String getBuildName() {
+		return BuildName;
+	}
+
+
+
+	public void setBuildName(String buildName) {
+		BuildName = buildName;
+	}
+
+
+
+	public double getSqrFeet() {
+		return SqrFeet;
+	}
+
+
+
+	public void setSqrFeet(double sqrFeet) {
+		SqrFeet = sqrFeet;
+	}
+
+
+
+	public String getLocation() {
+		return Location;
+	}
+
+
+
+	public void setLocation(String location) {
+		Location = location;
+	}
+
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	
+	System.out.println("Details of two buildings:");
+	System.out.println("-------------------------------------------------------");
+	
+	BuildingB bd = new BuildingB("Building B", 1400, "Bangalore");
+	
+	bd.BuildingA();
+	
+	
+	System.out.println("Details of Second buildings;");
+	
+	System.out.println("Building Name: " + bd.getBuildName());
+	System.out.println("Building Name: " + bd.getSqrFeet());
+	System.out.println("Building Name: " + bd.getLocation());
+
+	}
+}
+/* Output
+Details of two buildings:
+-------------------------------------------------------
+Details of First building;
+Building Name: Building A
+Building Name: 5000.0
+Building Name: Hyderabad
+ 
+Details of Second buildings;
+Building Name: Building B
+Building Name: 1400.0
+Building Name: Bangalore
+
+
+*/
